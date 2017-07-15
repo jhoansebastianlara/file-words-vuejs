@@ -1,11 +1,11 @@
 <template>
   <div class="upload-zone">
     <div v-if="!supportsFileAPI" class="error-message">
-      <h2>The File APIs are not fully supported in this browser</h2>
+      <h2>{{ $('global.files_api_not_supported') }}</h2>
     </div>
     <div v-else>
   		<div>
-  			Select a text file:
+  			{{ $t('global.select_file') }}
   			<input type="file" id="fileInput" @change="readText" accept=".txt">
   		</div>
 
@@ -37,23 +37,14 @@
         if (file.type.match(textType)) {
           this.$emit('fileLoaded', file)
         } else {
-          this.error = 'File not supported'
+          this.error = this.$t('global.file_not_supported')
         }
       }
     },
 
     mounted () {
       // check that the browser fully supports the File API
-      if (window.File && window.FileReader && window.FileList && window.Blob) {
-        // Great success! All the File APIs are supported.
-        this.reader = new FileReader()
-        this.reader.onerror = this.errorHandler
-        this.reader.onprogress = this.updateProgress
-        this.reader.onload = this.onloadHandler
-        this.reader.onabort = (e) => {
-          this.error = 'File read cancelled'
-        }
-      } else {
+      if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
         this.supportsFileAPI = false
       }
     }
@@ -65,7 +56,6 @@
   @import "~styles";
 
   .upload-zone {
-    // border: 1px solid color(grays, medium);
     padding: 1em 0;
   }
 </style>

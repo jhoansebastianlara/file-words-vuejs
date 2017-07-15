@@ -4,7 +4,6 @@
       <span>{{ progress }}%</span>
     </div>
     <div class="progress-percent" :style="{ width: progress + '%' }">
-
     </div>
   </div>
 </template>

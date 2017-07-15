@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="app-container">
-      <h1>Words counter</h1>
-      <span class="subtitle">This application outputs the individual words that appear in an uploaded text file, and show how many occurrences they have</span>
+      <h1>{{ $t('global.app_name') }}</h1>
+      <span class="subtitle">{{ $t('global.app_desc') }}</span>
 
       <file-load @fileLoaded="readText"></file-load>
 
@@ -10,11 +10,11 @@
         <div class="tabs">
           <div :class="{active: wordsTabActived}"
                @click="tabActive = 'words'">
-            <h2>Words</h2>
+            <h2>{{ $t('global.words') }}</h2>
           </div>
           <div :class="{active: textTabActived}"
                @click="tabActive = 'text'">
-            <h2>Text</h2>
+            <h2>{{ $t('global.text') }}</h2>
           </div>
         </div>
 
@@ -27,9 +27,9 @@
                class="list">
                <table>
                  <tr>
-                   <th width="50%">Words ({{ totalWords }})</th>
-                   <th width="25%"># Ocurrences</th>
-                   <th width="25%">Is Prime?</th>
+                   <th width="50%">{{ $t('global.words_count', {count: totalWords}) }}</th>
+                   <th width="25%">{{ $t('global.number_ocurrences') }}</th>
+                   <th width="25%">{{ $t('global.is_prime') }}</th>
                  </tr>
                  <tr v-for="(ocurrences, word) in allWords">
                    <td>{{ word }}</td>

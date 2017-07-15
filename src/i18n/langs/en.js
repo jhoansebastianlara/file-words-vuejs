@@ -1,34 +1,14 @@
 export default {
   global: {
-    pageNotFound: 'Page not found 😐',
-    goToPlay: 'Go to play',
-    close: 'Close',
-    login: 'Login',
-    logout: 'Logout',
-    general_error: 'Something was wrong, try later',
-    myGames: 'My Games',
-    none: 'None'
-  },
-
-  game: {
-    game_over: 'GAME OVER',
-    you_win: 'YOU WIN!',
-    flag: 'Flag',
-    level: 'Level',
-    easy: 'Easy',
-    medium: 'Medium',
-    hard: 'Hard',
-    grid: 'Grid',
-    time: 'Time',
-    status: 'Status',
-    playing: 'Playing',
-    pause: 'Pause',
-    you_won: 'You Won',
-    you_lost: 'You Lost'
-  },
-
-  user: {
-    email: 'Email',
-    enter_valid_email_error: 'You should enter a valid email'
+    app_name: 'Words counter',
+    app_desc: 'This application outputs the individual words that appear in an uploaded text file, and show how many occurrences they have',
+    select_file: 'Select a text file',
+    files_api_not_supported: 'The File APIs are not fully supported in this browser',
+    file_not_supported: 'File not supported',
+    words: 'Words',
+    words_count: 'Words ({count})',
+    text: 'text',
+    number_ocurrences: '# Ocurrences',
+    is_prime: 'Is Prime?'
   }
 }
