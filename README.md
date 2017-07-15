@@ -2,6 +2,8 @@
 
 This application outputs the individual words that appear in an uploaded text file, and show how many occurrences they have
 
+[DEMO](http://138.68.9.12:3001/)
+
 ![alt text](https://user-images.githubusercontent.com/8799407/28241909-02dcf15a-6964-11e7-9d0f-30548d5cc2aa.gif)
 
 ## Prerequisites
