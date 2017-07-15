@@ -1,0 +1,27 @@
+// Variables and Theming
+
+$colors: (
+  primary: #0276FD,
+  primary-light: #499DF5,
+  secondary: #EA4335,
+  success: #01C501,
+  warning: #FFAE00,
+  danger: #FF0017,
+  background-app: #F4F4F4,
+  blue-light-sky: #87CEFA,
+  grays: (
+    light: #E6E6E6,
+    medium: #CACACA,
+    dark: #606060
+  )
+);
+
+$cell-size: 1.5em;
+$game-state-bar-height: 3em;
+
+// cell
+$cell-background-color: #c0c0c0;
+$cell-background-active-color: #bdbdbd;
+$cell-border-color: #808080;
+$cell-border-active-color: #999;
+$cell-border-ouset-color: #ececec;
